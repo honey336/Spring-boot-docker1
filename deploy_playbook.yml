@@ -10,15 +10,15 @@
     copy:
       src: target
       dest: /home/ansible/
-  - name: create docker image using war file
-    shell: docker build -t mylandmarktech/springapp /home/ansible/
+  - name: create docker image using jar file
+    shell: docker build -t honeybussy336/springapp /home/ansible/
     ignore_errors: yes
   - name: push image on to dockerhub
-    shell: docker push mylandmarktech/springapp
+    shell: docker push honeybussy336/springapp
     ignore_errors: yes
 
   - name: remove docker images form ansible server
-    shell: docker rmi mylandmarktech/springapp:latest
+    shell: docker rmi honeybussy336/springapp:latest
     ignore_errors: yes
 
 - hosts: k8s
