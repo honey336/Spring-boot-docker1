@@ -14,7 +14,7 @@ spec:
         app: springboot
     spec:
       containers:
-      - image: honeybussy336/springapp
+      - image: honeybussy336/springapp:latest
         name: springboot
         ports:
         - containerPort: 8080  
