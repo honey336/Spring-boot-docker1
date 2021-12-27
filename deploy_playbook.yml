@@ -25,10 +25,10 @@
   #become: true
   #user: ubuntu
   tasks:
-  - name: copy kube-manifest
+  #- name: copy kube-manifest
     copy:
-      src: myapp.yml
-      dest: /home/ansible
+      #src: myapp.yml
+      #dest: /home/ansible
   - name: create a deployment
     command: kubectl apply -f myapp.yml
 
